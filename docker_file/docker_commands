@@ -1,0 +1,33 @@
+docker stats
+
+docker ps -a
+
+docker rm -v pleasework3
+
+docker rm $(docker ps -aq --filter name=pleasework1)
+
+docker run --name pleasework3 -d -p 8080:80 pleasework:v1
+
+docker kill pleasework
+
+wget http://localhost:8080 | cat index.html
+
+su systemctl restart docker
+
+ps kill pid 89454
+
+ps wuf -u root | grep docker
+
+systemctl status docker.service
+
+docker images
+
+docker build -t pleasework:v2 .
+
+sudo systemctl restart docker
+
+docker exec pleasework cat /usr/share/nginx/html/50x.html
+
+find nginx .
+
+docker build -t pleasework:v1
